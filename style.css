@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green500: hsl(158, 36%, 37%);
+  --green700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--cream);
+  padding: 5rem 0.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+h1 {
+  font-family: "fraunces", serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+picture {
+  width: 100%;
+  display: block;
+}
+
+.parfum-image {
+  width: 100%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.category {
+  text-transform: uppercase;
+
+  color: var(--grey);
+  font-size: 0.75rem;
+  line-height: 120%;
+  letter-spacing: 5px;
+}
+
+.product-title {
+  font-size: 2rem;
+}
+
+.product-description {
+  color: var(--grey);
+  font-size: 0.875rem;
+  line-height: 160%;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current-price {
+  font-family: "fraunces", serif;
+  font-size: 2rem;
+  color: var(--green500);
+  font-weight: bold;
+}
+
+.old-price {
+  font-size: 0.8125rem;
+  color: var(--grey);
+}
+
+.add-to-cart {
+  font-family: "Montserrat", serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 110%;
+  color: var(--white);
+  background-color: var(--green500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+@media (min-width: 48rem) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 37.5rem;
+  }
+
+  picture {
+    height: 100%;
+  }
+
+  .parfum-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .add-to-cart:hover {
+    background-color: var(--green700);
+    cursor: pointer;
+  }
+}
